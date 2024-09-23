@@ -4,7 +4,7 @@ using TesteBackEnd.Data.Context;
 
 namespace TesteBackEnd.Data.Repository
 {
-    internal class ClienteRepository : Repository<Cliente>, IClienteRepository
+    public class ClienteRepository : Repository<Cliente>, IClienteRepository
     {
         public ClienteRepository(TesteDbContext db) : base(db)
         {

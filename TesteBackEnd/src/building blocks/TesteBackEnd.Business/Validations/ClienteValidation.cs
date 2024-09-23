@@ -3,7 +3,7 @@ using TesteBackEnd.Core.Models;
 
 namespace TesteBackEnd.Business.Validations
 {
-    internal class ClienteValidation : AbstractValidator<Cliente>
+    public class ClienteValidation : AbstractValidator<Cliente>
     {
         public ClienteValidation()
         {

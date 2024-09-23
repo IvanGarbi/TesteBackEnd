@@ -6,7 +6,7 @@ using TesteBackEnd.Data.Context;
 
 namespace TesteBackEnd.Data.Repository
 {
-    internal class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
     {
         protected readonly TesteDbContext Db;
         protected readonly DbSet<TEntity> DbSet;
