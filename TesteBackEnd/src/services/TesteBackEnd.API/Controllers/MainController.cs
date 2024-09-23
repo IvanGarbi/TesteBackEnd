@@ -16,7 +16,7 @@ namespace TesteBackEnd.API.Controllers
 
         protected ActionResult Respose(object result = null)
         {
-            if (_notificador.TemNotificacao())
+            if (!_notificador.TemNotificacao())
             {
                 return Ok(new
                 {
