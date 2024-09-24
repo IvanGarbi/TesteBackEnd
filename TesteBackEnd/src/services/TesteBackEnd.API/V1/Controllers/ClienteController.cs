@@ -11,7 +11,7 @@ using TesteBackEnd.Core.Models;
 
 namespace TesteBackEnd.API.V1.Controllers
 {
-    [Route("v{version:apiVersion}/Cliente/[controller]")]
+    [Route("v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0")]
     public class ClienteController : MainController
     {

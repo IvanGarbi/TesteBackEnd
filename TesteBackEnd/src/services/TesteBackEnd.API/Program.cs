@@ -46,6 +46,12 @@ builder.Services.AddScoped<INotificador, Notificador>();
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.AddCors(o => o.AddPolicy("AllowAll", builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+}));
 
 var app = builder.Build();
 
@@ -57,6 +63,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(x => x
+   .AllowAnyOrigin()
+   .AllowAnyMethod()
+   .AllowAnyHeader());
 
 app.UseAuthorization();
 
